@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Participant Detail</title>
+</head>
+<body>
+    <h1>Participant Detail</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>School Grade</th>
+            <th>Age</th>
+            <th>Date of Birth</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td th:text="${participant.participantName}"></td>
+            <td th:text="${participant.schoolGrade}"></td>
+            <td th:text="${participant.age}"></td>
+            <td th:text="${#dates.format(participant.dob, 'MM/dd/yyyy')}"></td>
+            <td th:text="${participant.email}"></td>
+        </tr>
+    </table>
+</body>
+</html>

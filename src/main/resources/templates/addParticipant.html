@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Participant</title>
+</head>
+<body>
+    <h1>Add Participant</h1>
+    <form action="/participants" method="post" th:object="${participant}">
+        <label>Name:
+            <input type="text" th:field="*{participantName}" />
+        </label>
+        <label>School Grade:
+            <input type="number" th:field="*{schoolGrade}" />
+        </label>
+        <label>Age:
+            <input type="number" th:field="*{age}" min="6" max="10"/>
+        </label>
+        <label>Date of Birth:
+            <input type="date" th:field="*{dob}" />
+        </label>
+        <label>Email:
+            <input type="email" th:field="*{email}" />
+        </label>
+        <input type="submit" value="Add Participant" />
+    </form>
+</body>
+</html>
